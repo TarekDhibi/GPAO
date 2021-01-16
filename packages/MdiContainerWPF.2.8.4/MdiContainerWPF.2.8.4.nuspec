@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>MdiContainerWPF</id>
+    <version>2.8.4</version>
+    <title>MDI Container for WPF</title>
+    <authors>András Sebő, Lazaros Ioannidis</authors>
+    <owners>András Sebő, Lazaros Ioannidis</owners>
+    <projectUrl>https://github.com/epinoema/Hammer.MdiContainer</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MDIContainer is a custom WPF control (also part of the Hammer UI Kit), allows you to display user controls as windows in a container. The motive was to make available to work with multiple documents in the same time.</description>
+    <summary>GNU General Public License version 3 (GPLv3)</summary>
+    <copyright>András Sebő</copyright>
+  </metadata>
+</package>

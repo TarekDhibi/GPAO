@@ -1,0 +1,139 @@
+﻿<Window x:Class="fsg_gpao.Interfaces.GererAgents"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            Title="Gérer les Personnels" WindowState="Maximized"  >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+    
+        <Grid Grid.Row="0">
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Grid Grid.Column="1"  Grid.Row="0" Margin="20" >
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="13*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Détails" Grid.Row="0" Foreground="White" FontSize="24"  FontFamily="Segoe UI Light" Background="#008000" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                    <Grid Grid.Column="0" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="2*" />
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="9*"/>
+                            <ColumnDefinition Width="9*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Identifient" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                        <Label Content="Login" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                        <Label Content="Mot de passe" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                        <Label Content="E-mail" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                        <Label Content="Service" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                        <Label Content="Etat" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                        <TextBox x:Name="TBId"  Grid.Column="1" Grid.Row="0"  IsEnabled="False" VerticalAlignment="Center"/>
+                        <TextBox x:Name="TBLogin"  Grid.Column="1" Grid.Row="1"  VerticalAlignment="Center"/>
+                        <TextBox x:Name="TBMotdepasse"  Grid.Column="1" Grid.Row="2"  VerticalAlignment="Center"/>
+                        <TextBox x:Name="TBEmail"  Grid.Column="1" Grid.Row="3"  VerticalAlignment="Center"/>
+                        <ComboBox x:Name="CBService" SelectedIndex="0" Grid.Column="1" Grid.Row="4"  VerticalAlignment="Center" Background="White" >
+                            <ComboBoxItem>Administrateur</ComboBoxItem>
+                            <ComboBoxItem>Agent Commercial</ComboBoxItem>
+                            <ComboBoxItem>Agent de production</ComboBoxItem>
+                        </ComboBox>
+                        <CheckBox x:Name="CHEtat" Grid.Column="1" Grid.Row="5"   VerticalAlignment="Center"/>
+                        <Label Content="(*)" Foreground="Red" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+                        <Label Content="(*)" Foreground="Red" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+                        <Label Content="(*)" Foreground="Red" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Expander Header="Options" IsExpanded="False"   VerticalAlignment="Center">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Button x:Name="BTModifier" Grid.Column="1"  Opacity="0.5" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" Height="64" Background="Transparent" MouseEnter="BTModifier_MouseEnter" MouseLeave="BTModifier_MouseLeave" Click="BTModifier_Click"    >
+                                    <Image Source="../Images/ModifierB.png"   />
+                                </Button>
+                                <Button x:Name="BTSupprimer" Grid.Column="3" Opacity="0.5" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" Height="64" Background="Transparent" MouseEnter="BTSupprimer_MouseEnter" MouseLeave="BTSupprimer_MouseLeave" Click="BTSupprimer_Click"   >
+                                    <Image Source="../Images/SuppAdmin.png"  />
+                                </Button>
+                                <Button x:Name="BTConfirmer" Grid.Column="1" Visibility="Hidden" Opacity="0.5"  HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" Height="64" Background="Transparent" MouseEnter="BTConfirmer_MouseEnter" MouseLeave="BTConfirmer_MouseLeave" Click="BTConfirmer_Click"   >
+                                    <Image Source="../Images/ok.png"   />
+                                </Button>
+                                <Button x:Name="BTAnnuler" Grid.Column="3" Opacity="0.5" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" Height="64" Background="Transparent" MouseEnter="BTAnnuler_MouseEnter" MouseLeave="BTAnnuler_MouseLeave" Click="BTAnnuler_Click"   >
+                                    <Image Source="../Images/close.png"   />
+                                </Button>
+                            </Grid>
+                        </Expander>
+                    </Grid>
+
+                </Grid>
+                <Grid Grid.Column="0"  Grid.Row="0" Margin="20" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="13*" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Liste des profils" Grid.Row="0" Foreground="White" FontSize="24"  FontFamily="Segoe UI Light" Background="#008000" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                    <DataGrid x:Name="DataGridAgents" Grid.Row="1" Background="White" BorderBrush="#14a10f" MouseUp="DataGridAgents_MouseUp" AutoGenerateColumns="False" CanUserAddRows="False"  >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding ID}" Width="0.5*" />
+                            <DataGridTextColumn Header="Login" Binding="{Binding LOGIN}" Width="1.5*" />
+                            <DataGridTextColumn Header="Mot de passe" Binding="{Binding MDP}" Width="2*" />
+                            <DataGridTextColumn Header="E-mail" Binding="{Binding MAIL}" Width="3*" />
+                            <DataGridTextColumn Header="Service" Binding="{Binding SERVICE}" Width="2.5*" />
+                            <DataGridTextColumn Header="Etat" Binding="{Binding ETAT}" Width="1*" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Grid Grid.Row="2">
+                        <Expander IsExpanded="False" Header="Filtres" MouseDown="Expander_MouseDown" MouseUp="Expander_MouseDown"   >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="1*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox x:Name="CBFiltres" Grid.Column="0" SelectedIndex="0" Background="White">
+                                    <ComboBoxItem Content="Login" />
+                                    <ComboBoxItem Content="E-mail" />
+                                    <ComboBoxItem Content="Service" />
+                                    <ComboBoxItem Content="Etat" />
+                                </ComboBox>
+                                <TextBox Background="White" x:Name="TBFiltres" Grid.Column="1" KeyUp="TBFiltres_KeyUp" BorderBrush="#14a10f"  />
+                            </Grid>
+
+                        </Expander>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+
+
+        </Grid>
+
+
+        <Label x:Name="MsgInfo" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" ></Label>
+
+    </Grid>
+</Window>

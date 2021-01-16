@@ -1,0 +1,28 @@
+﻿<Window x:Class="fsg_gpao.Interfaces.Statistique"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:DV="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        Title="Statistique" Height="Auto" Width="Auto">
+    
+    <Grid>
+        <Grid>
+
+            <!-- Pie Chart -->
+            <DVC:Chart Canvas.Top="80"  Canvas.Left="10" x:Name="mcChart" 
+           Width="Auto" Height="Auto"
+           Background="Lavender">
+                <DVC:Chart.Series>
+                    <DVC:PieSeries Title="Experience" 
+            IndependentValueBinding="{Binding Path=Key}"
+            DependentValueBinding="{Binding Path=Value}">
+
+
+                    </DVC:PieSeries>
+                </DVC:Chart.Series>
+            </DVC:Chart>
+
+
+        </Grid>
+    </Grid>
+</Window>

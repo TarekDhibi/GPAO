@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37762E9A-3EF5-4FF7-B4EF-73EF79ED873D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fsg_gpao</RootNamespace>
+    <AssemblyName>fsg_gpao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hammer.MDIContainer.Control, Version=2.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\9oronds\fsg_gpao\fsg_gpao\bin\Debug\Hammer.MDIContainer.Control.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=3.5.40128.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WPFToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Interfaces\Aide.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\AjouterAchat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\AjouterAtelier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\AjouterBonProduction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\AjouterDevis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\AjouterFournisseur.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\AJouterGroupeDeTravail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\AjouterProduit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\AjouterVente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\AjouterAgent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\AjouterArticle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\AjouterClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\Apropos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\CalculCharge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\ConsulterGroupeDeTravail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\GererAchat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\GererAgents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\GererArticles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\GererAtelier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\GererBonProduction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\GererDevis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\GererFournisseur.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\GererProduits.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\GereVente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\GestionClient.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interfaces\Journal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\Principale.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\Statistique.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\Statistique2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\Statistique3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaces\SuiviDeProduction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Acteurs\Achat.cs" />
+    <Compile Include="Acteurs\Article.cs" />
+    <Compile Include="Acteurs\Atelier.cs" />
+    <Compile Include="Acteurs\ClasseurAchat.cs" />
+    <Compile Include="Acteurs\ClasseurDevis.cs" />
+    <Compile Include="Acteurs\ClasseurProduit.cs" />
+    <Compile Include="Acteurs\ClasseurVente.cs" />
+    <Compile Include="Acteurs\Client.cs" />
+    <Compile Include="Acteurs\Devis.cs" />
+    <Compile Include="Acteurs\BonProduction.cs" />
+    <Compile Include="Acteurs\Fournisseur.cs" />
+    <Compile Include="Acteurs\GroupeDeTravail.cs" />
+    <Compile Include="Acteurs\JournalArticle.cs" />
+    <Compile Include="Acteurs\JournalAchat.cs" />
+    <Compile Include="Acteurs\JournalVente.cs" />
+    <Compile Include="Acteurs\JournalP.cs" />
+    <Compile Include="Acteurs\JournalProd.cs" />
+    <Compile Include="Acteurs\Produits.cs" />
+    <Compile Include="Acteurs\profile.cs" />
+    <Compile Include="Acteurs\SuiviBonProd.cs" />
+    <Compile Include="Acteurs\Vente.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Connecteurs\AchatC.cs" />
+    <Compile Include="Connecteurs\ArticleC.cs" />
+    <Compile Include="Connecteurs\AtelierC.cs" />
+    <Compile Include="Connecteurs\ClasseurAchatC.cs" />
+    <Compile Include="Connecteurs\ClasseurDeviC.cs" />
+    <Compile Include="Connecteurs\ClasseurProduitC.cs" />
+    <Compile Include="Connecteurs\ClasseurVenteC.cs" />
+    <Compile Include="Connecteurs\ClientC.cs" />
+    <Compile Include="Connecteurs\DeviC.cs" />
+    <Compile Include="Connecteurs\BonProductionC.cs" />
+    <Compile Include="Connecteurs\FournisseurC.cs" />
+    <Compile Include="Connecteurs\GroupeDeTravailC.cs" />
+    <Compile Include="Connecteurs\JournalAchatC.cs" />
+    <Compile Include="Connecteurs\JournalArticleC.cs" />
+    <Compile Include="Connecteurs\journalVenteC.cs" />
+    <Compile Include="Connecteurs\JournalPC.cs" />
+    <Compile Include="Connecteurs\JournalProdC.cs" />
+    <Compile Include="Connecteurs\ProduitC.cs" />
+    <Compile Include="Connecteurs\profilC.cs" />
+    <Compile Include="Connecteurs\SuiviBonProdC.cs" />
+    <Compile Include="Connecteurs\VenteC.cs" />
+    <Compile Include="Connexion bd\ComboboxItem.cs" />
+    <Compile Include="Connexion bd\Connexion.cs" />
+    <Compile Include="Connexion bd\EnvoyerEmail.cs" />
+    <Compile Include="Interfaces\Aide.xaml.cs">
+      <DependentUpon>Aide.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AjouterAchat.xaml.cs">
+      <DependentUpon>AjouterAchat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AjouterAtelier.xaml.cs">
+      <DependentUpon>AjouterAtelier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AjouterBonProduction.xaml.cs">
+      <DependentUpon>AjouterBonProduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AjouterDevis.xaml.cs">
+      <DependentUpon>AjouterDevis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AjouterFournisseur.xaml.cs">
+      <DependentUpon>AjouterFournisseur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AJouterGroupeDeTravail.xaml.cs">
+      <DependentUpon>AJouterGroupeDeTravail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AjouterProduit.xaml.cs">
+      <DependentUpon>AjouterProduit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AjouterVente.xaml.cs">
+      <DependentUpon>AjouterVente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AjouterAgent.xaml.cs">
+      <DependentUpon>AjouterAgent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AjouterArticle.xaml.cs">
+      <DependentUpon>AjouterArticle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\AjouterClient.xaml.cs">
+      <DependentUpon>AjouterClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Apropos.xaml.cs">
+      <DependentUpon>Apropos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\CalculCharge.xaml.cs">
+      <DependentUpon>CalculCharge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ConsulterGroupeDeTravail.xaml.cs">
+      <DependentUpon>ConsulterGroupeDeTravail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\GererAchat.xaml.cs">
+      <DependentUpon>GererAchat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\GererAgents.xaml.cs">
+      <DependentUpon>GererAgents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\GererArticles.xaml.cs">
+      <DependentUpon>GererArticles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\GererAtelier.xaml.cs">
+      <DependentUpon>GererAtelier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\GererBonProduction.xaml.cs">
+      <DependentUpon>GererBonProduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\GererDevis.xaml.cs">
+      <DependentUpon>GererDevis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\GererFournisseur.xaml.cs">
+      <DependentUpon>GererFournisseur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\GererProduits.xaml.cs">
+      <DependentUpon>GererProduits.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\GereVente.xaml.cs">
+      <DependentUpon>GereVente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\GestionClient.xaml.cs">
+      <DependentUpon>GestionClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Journal.xaml.cs">
+      <DependentUpon>Journal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Principale.xaml.cs">
+      <DependentUpon>Principale.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Statistique.xaml.cs">
+      <DependentUpon>Statistique.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Statistique2.xaml.cs">
+      <DependentUpon>Statistique2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\Statistique3.xaml.cs">
+      <DependentUpon>Statistique3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\SuiviDeProduction.xaml.cs">
+      <DependentUpon>SuiviDeProduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Authentification.PNG" />
+    <Resource Include="Images\cancel.png" />
+    <Resource Include="Images\confirm.png" />
+    <Resource Include="Images\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\admin.png" />
+    <Resource Include="Images\Deconnexion.png" />
+    <Resource Include="Images\QuitterM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ModifierB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AddAdmin.png" />
+    <Resource Include="Images\SuppAdmin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ajouter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Consulter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add.PNG" />
+    <Resource Include="Images\rem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\agent.png" />
+    <Resource Include="Images\fourn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\atelier.png" />
+    <Resource Include="Images\groupe.png" />
+    <Resource Include="Images\prod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\achat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\produit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\devis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\vente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\article.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\calcul.png" />
+    <Resource Include="Images\suivi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\addachat.png" />
+    <Resource Include="Images\addvente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\addgroupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\adddevis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\addbon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\addarticle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\addatelier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\addporoduit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\aj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\modif.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\I.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\log.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\aide.png" />
+    <Resource Include="Images\aprops.png" />
+    <Resource Include="Images\hist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\stat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\S2.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

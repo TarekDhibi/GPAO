@@ -1,0 +1,140 @@
+﻿<Window x:Class="fsg_gpao.Interfaces.GererProduits"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gérer les produits" WindowState="Maximized"  >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Grid Grid.Column="1"  Grid.Row="0" Margin="20" >
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="13*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Détails" Grid.Row="0" Foreground="White" FontSize="24"  FontFamily="Segoe UI Light" Background="#008000" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                    <Grid Grid.Column="0" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="2*" />
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="9*"/>
+                            <ColumnDefinition Width="9*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Identifient" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                        <Label Content="Nom" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                        <Label Content="Cathégorie" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                        <Label Content="Description" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                        <Label Content="Quantité" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                        <Label Content="Prix" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+                        <TextBox x:Name="TBId"  Grid.Column="1" Grid.Row="0"  IsEnabled="False" VerticalAlignment="Center"/>
+                        <TextBox x:Name="TBNom"  Grid.Column="1" Grid.Row="1"  VerticalAlignment="Center"/>
+                        <TextBox x:Name="TBCat"  Grid.Column="1" Grid.Row="2"  VerticalAlignment="Center"/>
+                        <TextBox x:Name="TBDesc"  Grid.Column="1" Grid.Row="3"  VerticalAlignment="Center"/>
+                        <TextBox x:Name="TBquantite" Grid.Column="1" Grid.Row="4"  VerticalAlignment="Center" Background="White" ></TextBox>
+                        <TextBox x:Name="TBPrix" Grid.Column="1" Grid.Row="5"   VerticalAlignment="Center"/>
+                        <Label Content="(*)" Foreground="Red" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+                        <Label Content="(*)" Foreground="Red" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+                        <Label Content="(*)" Foreground="Red" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Expander Header="Options" IsExpanded="False"   VerticalAlignment="Center">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <!--<Button x:Name="BTAjouter" Grid.Column="0"  Opacity="0.5" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" Height="64" Background="Transparent" MouseEnter="BTAjouter_MouseEnter"  MouseLeave="BTAjouter_MouseLeave" Click="BTAjouter_Click"  >
+                                    <Image Source="../Images/AddAdmin.png"/>
+                                </Button>-->
+                                <Button x:Name="BTModifier" Grid.Column="1"  Opacity="0.5" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" Height="64" Background="Transparent" MouseEnter="BTModifier_MouseEnter" MouseLeave="BTModifier_MouseLeave" Click="BTModifier_Click"    >
+                                    <Image Source="../Images/Modif.png"   />
+                                </Button>
+                                <Button x:Name="BTSupprimer" Grid.Column="3" Opacity="0.5" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" Height="64" Background="Transparent" MouseEnter="BTSupprimer_MouseEnter" MouseLeave="BTSupprimer_MouseLeave" Click="BTSupprimer_Click"   >
+                                    <Image Source="../Images/md.png"  />
+                                </Button>
+                                <Button x:Name="BTConfirmer" Grid.Column="1" Visibility="Hidden" Opacity="0.5"  HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" Height="64" Background="Transparent" MouseEnter="BTConfirmer_MouseEnter" MouseLeave="BTConfirmer_MouseLeave" Click="BTConfirmer_Click"   >
+                                    <Image Source="../Images/confirm.png"   />
+                                </Button>
+                                <Button x:Name="BTAnnuler" Grid.Column="3" Opacity="0.5" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" Height="64" Background="Transparent" MouseEnter="BTAnnuler_MouseEnter" MouseLeave="BTAnnuler_MouseLeave" Click="BTAnnuler_Click"   >
+                                    <Image Source="../Images/cancel.png"   />
+                                </Button>
+                            </Grid>
+                        </Expander>
+                    </Grid>
+
+                </Grid>
+                <Grid Grid.Column="0"  Grid.Row="0" Margin="20" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="13*" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Liste des Produits" Grid.Row="0" Foreground="White" FontSize="24"  FontFamily="Segoe UI Light" Background="#008000" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,-0.333,0"/>
+                    <DataGrid x:Name="DataGridArticle" Grid.Row="1" MouseUp="DataGridArticle_MouseUp" Background="White" BorderBrush="#14a10f" AutoGenerateColumns="False" CanUserAddRows="False"  >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding ID}" Width="0.5*" />
+                            <DataGridTextColumn Header="Nom" Binding="{Binding NOM}" Width="1.5*" />
+                            <DataGridTextColumn Header="Cathégrie" Binding="{Binding CAT}" Width="2*" />
+                            <DataGridTextColumn Header="Description" Binding="{Binding DESC}" Width="3*" />
+                            <DataGridTextColumn Header="Quantité" Binding="{Binding QUANTITE}" Width="2*" />
+                            <DataGridTextColumn Header="Prix" Binding="{Binding PRIX}" Width="1*" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Grid Grid.Row="2">
+                        <Expander IsExpanded="False"   Header="Filtres" MouseDown="Expander_MouseDown" MouseUp="Expander_MouseDown"   >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="1*" />
+                                </Grid.ColumnDefinitions>
+                                <ComboBox x:Name="CBFiltres" Grid.Column="0" SelectedIndex="0" Background="White">
+                                    <ComboBoxItem Content="Nom" />
+                                    <ComboBoxItem Content="Catégorie" />
+                                    <ComboBoxItem Content="Description" />
+                                    <ComboBoxItem Content="Prix" />
+                                </ComboBox>
+                                <TextBox Background="White" x:Name="TBFiltres" Grid.Column="1" BorderBrush="#14a10f" KeyUp="TBFiltres_KeyUp" />
+                                <Button x:Name="BTImprimer" Grid.Column="2" Content="Imprimer" Background="Transparent" BorderBrush="Transparent" Click="BTImprimer_Click" />
+
+                            </Grid>
+
+                        </Expander>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+
+
+        </Grid>
+
+
+
+        <Label x:Name="MsgInfo" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left"></Label>
+    </Grid>
+</Window>

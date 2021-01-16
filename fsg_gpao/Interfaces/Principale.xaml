@@ -1,0 +1,309 @@
+﻿<Window xmlns:Control="clr-namespace:Hammer.MDIContainer.Control;assembly=Hammer.MDIContainer.Control"  x:Class="fsg_gpao.Interfaces.Principale"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Principale" Icon="../Images/I.png" Height="670" Width="941" MaxHeight="670" MaxWidth="941" WindowStartupLocation="CenterScreen"  >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.Background>
+                <ImageBrush ImageSource="../Images/12.jpg"/>
+            </Grid.Background>
+            <Menu x:Name="menueU" Margin="4" BorderBrush="Transparent" Background="Transparent" >
+                <MenuItem Header="" Width="22">
+                    <MenuItem.Icon>
+                        <Image Source="../Images/S2.png" />
+                    </MenuItem.Icon>
+
+                    <MenuItem x:Name="histo"  Header="_Historique"  Background="White" >
+                        <MenuItem.Icon>
+                            <Image  Source="../Images/hist.png"/>
+                        </MenuItem.Icon>
+                        <MenuItem Header="Administrateurs" Background="White" Click="MenuItem_Click_26">
+                            <MenuItem.Icon>
+                                <Image Source="../Images/agent.png"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Ventes" Background="White" Click="MenuItem_Click_27">
+                            <MenuItem.Icon>
+                                <Image Source="../Images/vente.png"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Achats" Background="White" Click="MenuItem_Click_28">
+                            <MenuItem.Icon>
+                                <Image Source="../Images/achat.png"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Articles" Background="White" Click="MenuItem_Click_29">
+                            <MenuItem.Icon>
+                                <Image Source="../Images/article.png"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Produits" Background="White" Click="MenuItem_Click_30" >
+                            <MenuItem.Icon>
+                                <Image Source="../Images/produit.png"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem x:Name="MIDE" Header="_Statistiques"  Background="White">
+                        <MenuItem.Icon>
+                            <Image Source="../Images/stat.png"/>
+                        </MenuItem.Icon>
+                        <MenuItem Header="Vente" Background="White" Click="MenuItem_Click_33">
+                            <MenuItem.Icon>
+                                <Image Source="../Images/vente.png"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Achat" Background="White" Click="MenuItem_Click_34">
+                                <MenuItem.Icon>
+                                    <Image Source="../Images/achat.png"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Header="Article" Background="White" Click="MenuItem_Click_31">
+                            <MenuItem.Icon>
+                                <Image Source="../Images/article.png"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Produits" Background="White" Click="MenuItem_Click_32">
+                            <MenuItem.Icon>
+                                <Image Source="../Images/produit.png"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem x:Name="MIDV" Header="_A propos"  Background="White" Click="MIDV_Click">
+                        <MenuItem.Icon>
+                            <Image  Source="../Images/aprops.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="MIDZ" Header="_Aide"  Background="White" Click="MIDZ_Click">
+                        <MenuItem.Icon>
+                            <Image  Source="../Images/aide.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+
+                    <MenuItem x:Name="MIDeconnexion" Header="_Déconnexion"  Background="White" Click="MIDeconnexion_Click">
+                        <MenuItem.Icon>
+                            <Image Source="../Images/Deconnexion.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem x:Name="MIQuitter"  Header="_Quitter"  Background="White" Click="MIQuitter_Click">
+                        <MenuItem.Icon>
+                            <Image  Source="../Images/QuitterM.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+
+
+            </Menu>
+
+        </Grid>
+        
+        <DockPanel Grid.Row="1">
+            <Menu Grid.Column="1" Background="White" ScrollViewer.VerticalScrollBarVisibility="Visible" DockPanel.Dock="Top" Margin="0,0,0,0" >
+
+                <MenuItem x:Name="mAgents" Background="Lavender"  Header="Agents"  BorderBrush="Gray" Click="MenuItem_Click"  >
+                    <MenuItem.Icon>
+                        <Image Height="16" Width="18"  Source="../Images/agent.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem Background="White" Header="Consulter" Click="MenuItem_Click_1">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Consulter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Background="White" Header="Ajouter" Click="MenuItem_Click_2">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Ajouter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem x:Name="MFournisseur" Background="Lavender"  Header="Fournisseurs" BorderBrush="Gray" Click="MenuItem_Click" >
+                    <MenuItem.Icon>
+                    <Image Height="16" Width="18"  Source="../Images/fourn.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem Background="White" Header="Consulter" Click="MenuItem_Click_12">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Consulter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Background="White" Header="Ajouter" Click="MenuItem_Click_13">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Ajouter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem x:Name="MCLient"  Background="Lavender"  Header="Clients" BorderBrush="Gray" >
+                    <MenuItem.Icon>
+                        <Image Height="16" Width="18"  Source="../Images/client.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem Background="White" Header="Consulter" Click="MenuItem_Click_3">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Consulter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Background="White" Header="Ajouter" Click="MenuItem_Click_4">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Ajouter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Background="Lavender" x:Name="MVentes"   Header="Ventes" BorderBrush="Gray" >
+                    <MenuItem.Icon>
+                        <Image Height="16" Width="18"  Source="../Images/vente.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem Background="White" Header="Consulter" Click="MenuItem_Click_9">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Consulter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Background="White" Header="Ajouter" Click="MenuItem_Click_8">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/addvente.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Background="Lavender" x:Name="MAchats" Header="Achats" BorderBrush="Gray" >
+                    <MenuItem.Icon>
+                        <Image Height="16" Width="18"  Source="../Images/achat.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem Background="White" Header="Consulter" Click="MenuItem_Click_14">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Consulter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Background="White" Header="Ajouter" Click="MenuItem_Click_15">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/addachat.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Background="Lavender" x:Name="MDevis"   Header="Devis" BorderBrush="Gray" >
+                    <MenuItem.Icon>
+                        <Image Height="16" Width="18"  Source="../Images/devis.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem Background="White" Header="Consulter" Click="MenuItem_Click_16">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Consulter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Background="White" Header="Ajouter" Click="MenuItem_Click_17">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/adddevis.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Background="Lavender" x:Name="MArticles"  Header="Articles" BorderBrush="Gray" >
+                    <MenuItem.Icon>
+                        <Image Height="16" Width="18"  Source="../Images/article.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem Background="White" Header="Consulter" Click="MenuItem_Click_5">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Consulter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Background="White" Header="Ajouter" Click="MenuItem_Click_6">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/addarticle.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Background="Lavender" x:Name="MProduits"    Header="Produits" BorderBrush="Gray" >
+                    <MenuItem.Icon>
+                        <Image Height="16" Width="18"  Source="../Images/produit.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem Background="White" Header="Consulter" Click="MenuItem_Click_10">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Consulter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Background="White" Header="Ajouter" Click="MenuItem_Click_11">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/addporoduit.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Background="Lavender" x:Name="MAteliers"  Header="Ateliers" BorderBrush="Gray" >
+                    <MenuItem.Icon>
+                        <Image Height="16" Width="18"  Source="../Images/atelier.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem Background="White" Header="Consulter" Click="MenuItem_Click_18">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Consulter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Background="White" Header="Ajouter" Click="MenuItem_Click_19">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/addatelier.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Background="Lavender" x:Name="Mbon"  Header="Bons" BorderBrush="Gray" >
+                    <MenuItem.Icon>
+                        <Image Height="16" Width="18"  Source="../Images/bon.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem Background="White" x:Name="consulter" Header="Consulter" Click="MenuItem_Click_24">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Consulter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Background="White" x:Name="ajouter" Header="Ajouter" Click="MenuItem_Click_23">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/addbon.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Background="Lavender" x:Name="Mproduction"  Header="Production" BorderBrush="Gray" >
+                    <MenuItem.Icon>
+                        <Image Height="16" Width="18"  Source="../Images/prod.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem Background="White" Header="Suivi de production" Click="MenuItem_Click_25">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/suivi.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Background="White" Header="Calcul des charges" Click="CalculCharge">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/calcul.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Background="Lavender" x:Name="Mgroupes"   Header="Employés" BorderBrush="Gray"  >
+                    <MenuItem.Icon>
+                        <Image Height="16" Width="18"  Source="../Images/groupe.png"/>
+                    </MenuItem.Icon>
+
+                    <MenuItem Background="White" Header="Consulter" Click="MenuItem_Click_21">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/Consulter.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Background="White" Header="Ajouter" Click="MenuItem_Click_22">
+                        <MenuItem.Icon>
+                            <Image Height="16" Width="18"  Source="../Images/addgroupe.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Grid Grid.Row="2">
+            <Grid VerticalAlignment="Stretch" x:Name="StkPanelContent">
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
